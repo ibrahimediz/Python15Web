@@ -1,11 +1,28 @@
+{% load static %}
 <html>
-<head>
-</head>
-<body>
-{% for kayit in kayitlar %}
-<h1>{{kayit.adi}}</h1>
-<h1>{{kayit.soyadi}}</h1>
-<h1>{{kayit.tcKimlikNo}}</h1>
-{% endfor %}
-</body>
+    <head>
+        <title>Vektorel</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/benim.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">İsim Listesi</a></h1>
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% for kayit in kayitlar %}
+                    <div class="post">
+                          {{ kayit.adi }}
+                        <h1><a href="">{{ kayit.soyadi }}</a></h1>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
