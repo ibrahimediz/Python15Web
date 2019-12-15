@@ -6,7 +6,7 @@
                 {% for kayit in kayitlar %}
                     <div class="post">
                           {{ kayit.adi }}
-                        <h1><a href="">{{ kayit.soyadi }}</a></h1>
+                        <h1><a href="{% url 'kayitagit' pk=kayit.pk %}">{{ kayit.soyadi }}</a></h1>
                     </div>
                 {% endfor %}
                 </div>

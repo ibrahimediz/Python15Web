@@ -1,0 +1,18 @@
+{%extends "../base.html"%}
+    {% block content %}
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                <div class="post">
+                       <h1>  
+                        {{ kayit.adi }}
+                        <br>
+                        {{ kayit.soyadi }}
+                       </h1>
+                    <p>{{kayit.tcKimlikNo}}</p>
+                    <p>{{kayit.cinsiyet}}</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
