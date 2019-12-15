@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import KayitModels
 
 
 def kayitlist(request):
-    return render(request,'kayit/liste.html')
+    kayitlar = KayitModels.objects.all()
+    return render(request,'kayit/liste.html',{"kayitlar":kayitlar})
