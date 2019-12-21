@@ -25,7 +25,7 @@ SECRET_KEY = 'emm^hz2+**avfebwqp(=ae6(%&+%ru56d&($ml4ld#^p-3$j10'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["vektorelpython15.pythonanywhere.com"]
 
 
 # Application definition
