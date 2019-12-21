@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from .models import KayitModels
 
 from .forms import KayitForm
@@ -23,4 +23,17 @@ def yenikayit(request):
             return redirect('kayitagit', pk=kayit.pk)
     else:
         form = KayitForm()
+    return render(request, 'kayit/kayit_edit.html', {'form': form})
+
+
+def kayit_duzenle(request, pk):
+    kayit = get_object_or_404(KayitModels, pk=pk)
+    if request.method == "POST":
+        form = KayitForm(request.POST, instance=kayit)
+        if form.is_valid():
+            kayit = form.save(commit=False)
+            kayit.save()
+            return redirect('kayitagit', pk=kayit.pk)
+    else:
+        form = KayitForm(instance=kayit)
     return render(request, 'kayit/kayit_edit.html', {'form': form})
