@@ -12,9 +12,10 @@
         <div class="page-header">
         {%if user.is_authenticated %}
         Merhaba {{ user.username }} <br>
-        <a href="{% url 'logout' %}"><span class="glyphicon glyphicon-user"></span></a> 
+        <a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span></a> 
         {% else %}
-        <a href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a> 
+        <a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span></a> 
+         <a href="{% url 'signup' %}"><span class="glyphicon glyphicon-user"></span></a> 
         {%endif %}
         <a href="{% url 'kayityeni' %}"><span class="glyphicon glyphicon-plus"></span></a>
 
