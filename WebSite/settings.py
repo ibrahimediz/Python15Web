@@ -25,7 +25,7 @@ SECRET_KEY = 'emm^hz2+**avfebwqp(=ae6(%&+%ru56d&($ml4ld#^p-3$j10'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["vektorelpython15.pythonanywhere.com"]
+ALLOWED_HOSTS = ["127.0.0.1","vektorelpython15.pythonanywhere.com"]
 
 
 # Application definition
@@ -125,3 +125,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

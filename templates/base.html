@@ -8,9 +8,16 @@
         <link rel="stylesheet" href="{% static 'css/benim.css' %}">
     </head>
     <body>
+
         <div class="page-header">
+        {%if user.is_authenticated %}
+        Merhaba {{ user.username }} <br>
+        <a href="{% url 'logout' %}"><span class="glyphicon glyphicon-user"></span></a> 
+        {% else %}
+        <a href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a> 
+        {%endif %}
         <a href="{% url 'kayityeni' %}"><span class="glyphicon glyphicon-plus"></span></a>
-         
+
             <h1><a href="/">{%block baslik%}
             isim liste
             {% endblock %}</a></h1>
